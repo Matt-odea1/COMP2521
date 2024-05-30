@@ -1,0 +1,33 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of n, where n is the size of the tree.
+
+==================
+  BSTreeNumLeaves
+==================
+
+- Worst case time complexity: O(n)
+
+- Explanation: The function recursively loops through all elements of the BST in an in-order traversal.
+Hence, the function takes O(n) time to view the entire tree
+
+==================
+BSTreeDeleteLeaves
+==================
+
+- Worst case time complexity: O(n)
+
+- Explanation: As above, The function recursively loops through all elements of the BST in an in-order traversal.
+Hence, the function takes O(n) time to view the entire tree
+
+==================
+ BSTreeLevelOrder
+==================
+
+- Worst case time complexity: O(n)
+
+- Explanation: This function also has time complexity O(n), as the while loop will continue to run until 
+each queued value of the level order traversal is popped out of the queue stack, taking O(n) time.
+
+

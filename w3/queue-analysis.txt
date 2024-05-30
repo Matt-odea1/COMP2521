@@ -1,0 +1,77 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of n, where n is the size (i.e., number of items) of the queue
+
+=========
+ListQueue
+=========
+
+-------------+----------------------------------------------------------
+             |                    time complexity
+  operation  +-----------------+------------------+---------------------
+             |    best case    |    worst case    | amortised (optional)
+-------------+-----------------+------------------+---------------------
+             |                 |                  |
+   enqueue   |      O(1)       |       O(1)       |        O(1)
+             | This occurs when|The queue already |
+             |the list is empty|has elements.     |
+             | and the node is |New tail is added |
+             | inserted as both|                  |
+             | head and tail   |                  |
+-------------+-----------------+------------------+
+             |                 |                  |
+   dequeue   |      O(1)       |       O(1)       |        O(1)
+             |                 |                  |
+-------------+-----------------+------------------+
+
+==========
+ArrayQueue
+==========
+
+-------------+----------------------------------------------------------
+             |                    time complexity
+  operation  +-----------------+------------------+---------------------
+             |    best case    |    worst case    | amortised (optional)
+-------------+-----------------+------------------+---------------------
+             |                 |                  |
+   enqueue   |        O(1)     |       O(n)       |
+             | When memory does| Realloc must be  |
+             | not need to be  | called. Requires |
+             | increased,      | Copying the array|
+             | simply change   | Thus, O(n)       |
+             | array element   |                  |              
+-------------+-----------------+------------------+---------------------
+             |                 |                  |
+   dequeue   |       O(1)      |      O(n)        |
+             |List size is only| Must loop through| 
+             |1, no need to    | the entire list  |
+             |loop             | to change array  |
+             |more than once.  | values           |
+             |                 |                  |
+-------------+-----------------+------------------+---------------------
+                //SHOULD BE O(N)
+
+
+==================
+CircularArrayQueue
+==================
+
+-------------+----------------------------------------------------------
+             |                    time complexity
+  operation  +-----------------+------------------+---------------------
+             |    best case    |    worst case    | amortised (optional)
+-------------+-----------------+------------------+---------------------
+             |                 |                  |
+   enqueue   |       O(1)      |       O(n)       |
+             | Same as         | Same as listQueue|
+             | ListQueue       | Must increase    |
+             |                 | memory, Realloc  |
+-------------+-----------------+------------------+---------------------
+             |       O(1)      |       O(1)       |
+   dequeue   | Only 1 item     |Queue has many    |
+             | in the queue.   |items. Just Change|
+             | Find and remove |front index       |
+             |                 |and return old head
+-------------+-----------------+------------------+---------------------
+

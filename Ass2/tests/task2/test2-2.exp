@@ -1,0 +1,14 @@
+Reach: 3
+Energy costs:
+- Green: 1
+- Teal: 2
+- Pink: 3
+- Red: 1
+
+Path:
+-> Green rock at (2, 1)
+-> Red rock at (4, 1)
+-> Red rock at (6, 1)
+-> Red rock at (8, 1)
+
+Total energy: 4

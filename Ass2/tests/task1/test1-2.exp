@@ -1,0 +1,15 @@
+Reach: 5
+Colour: Teal
+
+Path:
+-> Teal rock at (5, 3)
+-> Teal rock at (7, 7)
+-> Teal rock at (6, 11)
+-> Teal rock at (6, 16)
+-> Teal rock at (10, 18)
+-> Teal rock at (14, 15)
+-> Teal rock at (13, 11)
+-> Teal rock at (13, 6)
+-> Teal rock at (16, 2)
+
+Total rocks: 9

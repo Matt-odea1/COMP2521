@@ -1,0 +1,31 @@
+Reach: 5
+Energy costs:
+- Green: 4
+- Teal: 5
+- Pink: 7
+- Red: 6
+
+Path:
+-> Red rock at (3, 9)
+-> Pink rock at (8, 9)
+-> Green rock at (12, 10)
+-> Teal rock at (16, 9)
+
+Total energy: 22
+
+(NOTE: There are two minimum energy paths, so the following output is also acceptable)
+
+Reach: 5
+Energy costs:
+- Green: 4
+- Teal: 5
+- Pink: 7
+- Red: 6
+
+Path:
+-> Pink rock at (4, 12)
+-> Red rock at (8, 11)
+-> Green rock at (12, 10)
+-> Teal rock at (16, 9)
+
+Total energy: 22

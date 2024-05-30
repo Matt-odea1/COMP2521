@@ -1,0 +1,16 @@
+Reach: 3
+Energy costs:
+- Green: 8
+- Teal: 4
+- Pink: 10
+- Red: 0
+Maximum energy: 10
+
+Path:
+-> Green rock at (2, 7) (energy left: 2)
+-> Rest (energy left: 10)
+-> Teal rock at (5, 7) (energy left: 6)
+-> Rest (energy left: 10)
+-> Green rock at (8, 7) (energy left: 2)
+
+Total turns: 5

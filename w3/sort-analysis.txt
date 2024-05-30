@@ -1,0 +1,49 @@
+Input      Initial   |  Number     Avg Time           Avg Time
+Size       Order     |  of Runs    for sortIntList    for sort
+10000      random    |  5          0.19               0.00
+10000      sorted    |  5          0.02               0.00
+10000      reverse   |  5          0.01               0.00
+20000      random    |  5          0.75               0.01
+20000      sorted    |  5          0.02               0.01
+20000      reverse   |  5          0.02               0.01
+40000      random    |  5          3.04               0.02
+40000      sorted    |  5          0.03               0.01
+40000      reverse   |  5          0.03               0.01
+100000     random    |  5          19.42              0.04
+100000     sorted    |  5          0.05               0.04
+100000     reverse   |  5          0.05               0.04
+
+Explanation of timing results:
+
+The time complexity of IntListInsertInOrder is O(n), as the function simply iterates through the 
+linked list to add the new element at the tail of the list. 
+IntListSortedCopy has a time complexity of O(n^2), as the function iterates through all the nodes
+of the linked list, while also calling IntListInsertInOrder, which has time complexity O(n) as above.
+
+Therefore, as input grows, SortIntList becomes unsustainabily long, taking 36.53 seconds.
+
+We can also make observations based on input type:
+
+1. Reverse
+When sorting in reverse order, the next value is always the smallest in the set (values 
+get progressively smaller eg. 100, 99 98 ... 1). Therefore, when using IntListInsertInOrder,
+we are able to switch to the elif statement which checks for the smallest value, avoiding
+looping through the linkedlist. Thus, we are able to cut O(n) from the time complexity, bringing
+the overall complexity simply to O(n) from O(n^2).
+
+2. Sorted
+Similar to the above case for reverse, IntListInsertInOrder will see that each value inserted
+is the largest value (1, 2, 3 ... 100). As a result, the time complexity comes down from O(n^2)
+to O(n). This is similar to Reverse, hence why the time values seem almost identical, taking 0.05
+seconds for 100,000 values.
+
+3. Random
+The random case has time complexity of O(n^2), however will generally take less time than this,
+as on average, the IntListInsertInOrder function will only have to loop through half of the list
+before finding the correct location to insert the node. As a result, this was the longest time,
+taking 19.42 seconds on average for 100,000 values.
+
+
+
+
+

@@ -1,0 +1,98 @@
+
+========================================================================
+                          Complexity Analysis
+========================================================================
+
+z5413887
+
+NOTE:
+- Your time complexities should be in big-O notation.
+- For operations that involve only one set, your time complexities should
+  be in terms of n, where n is the number of elements in the set.
+- For operations that involve two sets, your time complexities should be in
+  terms of n and m, where n and m are the number of elements in each of the
+  sets respectively.
+
+--------
+TreeKthSmallest
+--------
+
+Worst case complexity: O(n)
+
+Explanation: The worse case scenario occurs when int k is equal to the
+number of nodes in the tree.
+The function performs an inorder traversal of the tree for all
+the non-null elements, until the k smallest element is found.
+This will always requires O(log n) time to navigate to the 1st
+smallest element, before taking k extra time to navigate all
+additional nodes.
+Thus, when k == number of nodes, the whole tree is traversed, with time O(n)
+
+
+---------------
+TreeKthLargest
+---------------
+
+Worst case complexity: O(n)
+
+Explanation: Very similar to TreeKthSmallest. Worst case is when int k
+is equal to number of nodes in the tree.
+Peforms a reverse inorder traversal of the tree, starting with the largest
+element (which takes O(log n) time to find), before recursing through
+the remainder of the tree to find the k smallest element.
+Hence, in the worst case the whole tree is traversed, with time O(n)
+
+
+-------------
+TreeLCA
+-------------
+
+Worst case complexity: O(log n)
+
+Explanation: TreeLCA calls TreeSearch to check that the given keys
+are in the BST, with worst case time complexity O(log n) (as seen in
+lectures)
+Additionally, NodeLCA traverses the tree downwards until it finds a node
+for which A and B are not within the subtree. The last subtree containing
+both A and B is the LCA. At worst, this takes O(h) time, which is O(log n)
+in the balanced BST.
+
+
+-------------
+TreeFloor
+-------------
+
+Worst case complexity: O(log n)
+
+Explanation: Similar to TreeSearch, TreeFloor searches through the 
+tree vertically, moving the left if there are no values less that the
+given value in the right subtree.
+The traversal will at worst traverse each layer of the tree once,
+taking O(h) time, which is O(log n) in a balanced BST (as per lecture)
+
+
+-------------
+TreeCeiling
+-------------
+
+Worst case complexity: O(log n)
+
+Explanation: Very similar to TreeFloor, however instead of 
+looking for values less than or equal to the key given,
+it will search for the smallest value greater than or equal to the key.
+At worst, TreeCeiling traverses one value on each layer of the tree,
+taking O(log n) time.
+
+
+-------------
+TreeSearchBetween
+-------------
+
+Worst case complexity: O(n)
+
+Explanation: The worst case occurs wherein lower and upper
+are the smallest and largest values in the tree. Hence, NodeSearchBetween
+must traverse the entire tree and append each value to the List.
+This will take O(n) time
+
+

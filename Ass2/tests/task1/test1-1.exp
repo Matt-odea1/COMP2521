@@ -1,0 +1,24 @@
+Reach: 5
+Colour: Green
+
+Path:
+-> Green rock at (5, 6)
+-> Green rock at (9, 7)
+-> Green rock at (12, 4)
+-> Green rock at (15, 5)
+
+Total rocks: 4
+
+(NOTE: There are two shortest paths, so the following output is also acceptable)
+
+Reach: 5
+Colour: Green
+
+Path:
+-> Green rock at (5, 6)
+-> Green rock at (9, 7)
+-> Green rock at (12, 9)
+-> Green rock at (15, 5)
+
+Total rocks: 4
+
